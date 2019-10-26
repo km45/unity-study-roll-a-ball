@@ -1,6 +1,4 @@
-﻿// using System.Collections;
-// using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
@@ -8,11 +6,13 @@ public class FollowPlayer : MonoBehaviour
 
     private Vector3 offset;
 
-    void Start() {
+    void Start()
+    {
         offset = GetComponent<Transform>().position - target.position;
     }
 
-    void Update() {
+    void Update()
+    {
         GetComponent<Transform>().position = target.position + offset;
     }
 }
